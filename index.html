@@ -130,10 +130,11 @@
   .shaped{list-style:none;margin:0;padding:0;display:grid;gap:11px}
   .shaped li{position:relative;padding-left:18px;color:var(--ink-soft);line-height:1.5}
   .shaped li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--accent-soft)}
-  .known-l{font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:12px}
-  .known-list{list-style:none;margin:0;padding:0;display:grid;gap:12px}
-  .known-list li{position:relative;padding-left:24px;color:var(--ink);font-size:1rem;line-height:1.4;font-weight:500}
-  .known-list li::before{content:"\2713";position:absolute;left:0;top:0;color:var(--accent-soft);font-weight:700}
+  .known-l{font-family:var(--font-display);font-size:1.35rem;font-weight:500;line-height:1.08;color:var(--ink);margin-bottom:16px}
+  .known-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px clamp(18px,4vw,40px)}
+  @media(max-width:380px){.known-list{grid-template-columns:1fr}}
+  .known-list li{position:relative;padding-left:18px;color:var(--ink-soft);font-size:1rem;line-height:1.5}
+  .known-list li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--accent-soft)}
   .icard-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
   @media(max-width:600px){.icard-grid{grid-template-columns:1fr}}
   .icard{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
@@ -334,24 +335,23 @@
     </div>
 
     <div class="subsec"><h2>What's shaped me</h2>
-      <div class="shaped-grid">
-        <ul class="shaped">
-          <li>I am often the first hire in new or undefined roles, and not always by design.</li>
-          <li>I see through chaos, spot patterns, and identify gaps early.</li>
-          <li>A background in content writing, including for cricket and IPL teams.</li>
-          <li>Social media for small brands was my first paid job.</li>
-          <li>In 2024 I project-managed a NASA challenge, building toward COVID-19 detection in space.</li>
-        </ul>
-        <div class="known">
-          <div class="known-l">Known for</div>
-          <ul class="known-list">
-            <li>Bringing calm to chaos</li>
-            <li>Catching issues before they escalate</li>
-            <li>Creating clarity when things feel unclear</li>
-            <li>Slightly OCD (in a good way, I promise!)</li>
-          </ul>
-        </div>
+      <div class="values-grid">
+        <div class="vitem"><div class="vname">A non-linear career</div><div class="vdesc">Biotechnology → Marketing → Content → E-commerce → Technology → AI. Each stop taught me to look at problems from a different angle.</div></div>
+        <div class="vitem"><div class="vname">A comfort with ambiguity</div><div class="vdesc">I keep finding myself in rooms where the role, the process, or even the answer doesn't quite exist yet. I like those rooms.</div></div>
+        <div class="vitem"><div class="vname">A leap into technology</div><div class="vdesc">I moved from e-commerce and operations into technology without a traditional technology background. It taught me that curiosity can sometimes be more useful than having all the answers.</div></div>
+        <div class="vitem"><div class="vname">A creative beginning</div><div class="vdesc">My first paid job was writing content for small brands, from cricket to social media humour. Apparently, making people care about something and making teams ship something aren't that different.</div></div>
       </div>
+    </div>
+
+    <div class="subsec"><h2>What's inherently me</h2>
+      <ul class="known-list">
+        <li>Bringing calm to chaos</li>
+        <li>Seeing patterns others miss</li>
+        <li>Turning ambiguity into clarity</li>
+        <li>Curiosity that keeps me growing</li>
+        <li>Always looking for a better way</li>
+        <li>A little spiritual, a little analytical</li>
+      </ul>
     </div>
 
     <div class="subsec"><h2>What matters to me</h2>
