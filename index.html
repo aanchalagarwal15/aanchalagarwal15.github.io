@@ -291,8 +291,8 @@
       <div class="navlinks" id="navlinks">
         <a data-view="home">Home</a>
         <a data-view="about">About</a>
-        <a data-view="portfolio">Work Experience</a>
-        <a data-view="showcase">Project Showcase</a>
+        <a data-view="work-experience">Work Experience</a>
+        <a data-view="project-showcase">Project Showcase</a>
         <a data-view="certifications">Certifications &amp; Awards</a>
         <a data-view="contact">Contact</a>
       </div>
@@ -372,12 +372,12 @@
   </div></div>
 
   <!-- PORTFOLIO -->
-  <div class="view" id="view-portfolio"><div class="wrap page">
+  <div class="view" id="view-work-experience"><div class="wrap page">
     <div id="expRoot"></div>
   </div></div>
 
   <!-- PROJECT SHOWCASE -->
-  <div class="view" id="view-showcase"><div class="wrap page">
+  <div class="view" id="view-project-showcase"><div class="wrap page">
     <div class="page-h"><h1>Project Showcase</h1><p>A closer look at the highest-impact programs I've delivered across companies.</p></div>
     <div id="showcaseRoot"></div>
   </div></div>
@@ -724,7 +724,7 @@
   }
 
   /* nav / views */
-  var views={home:document.getElementById("view-home"),about:document.getElementById("view-about"),portfolio:document.getElementById("view-portfolio"),showcase:document.getElementById("view-showcase"),certifications:document.getElementById("view-certifications"),contact:document.getElementById("view-contact")};
+  var views={home:document.getElementById("view-home"),about:document.getElementById("view-about"),"work-experience":document.getElementById("view-work-experience"),"project-showcase":document.getElementById("view-project-showcase"),certifications:document.getElementById("view-certifications"),contact:document.getElementById("view-contact")};
   var navlinks=document.querySelectorAll(".navlinks a");
   function show(v){if(!views[v])v="home";Object.keys(views).forEach(function(k){views[k].classList.toggle("active",k===v)});navlinks.forEach(function(a){a.classList.toggle("active",a.getAttribute("data-view")===v)});window.scrollTo(0,0)}
   document.body.addEventListener("click",function(e){var a=e.target.closest("[data-view]");if(!a)return;e.preventDefault();var v=a.getAttribute("data-view");if(location.hash!=="#"+v)location.hash=v;else show(v)});
